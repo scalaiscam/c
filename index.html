@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- full page -->
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <meta name="theme-color" content="#3367D6"/>
+    <!-- icon page web -->
+    <link rel="icon" sizes="512x512" href="/images/icon-512.png">
+    <link rel="manifest" href="/manifest.json">
+    <!-- reuse same icon for Safari -->
+    <link rel="apple-touch-icon" href="/images/icon-512.png">
+
+    <!-- multiple icons for IE -->
+    <meta name="msapplication-square310x310logo" content="/images/icon-512.png">
+    <link rel="apple-touch-icon" href="/images/icon-512.png">
+    <meta name="msapplication-square70x70logo" content="/images/icon-512.png">
+    <meta name="msapplication-square150x150logo" content="/images/icon-512.png">
+    <meta name="msapplication-wide310x150logo" content="/images/icon-512.png">
+
+
+
+    <title>FullPage PWA Camille</title>
+</head>
+<body>
+
+      
+        <!-- <p>Si on est sur Chrome ou sur un device Android, on devrait voir ci-dessous le bouton d'installation</p> -->
+        <!-- <button id="btnAdd" class="btn btn-primary d-none">Installer la PWA</button> -->
+        
+        <ul id="menu">
+          <li data-menuanchor="firstPage"><a href="#firstPage">Menu 1</a></li>
+          <li data-menuanchor="secondPage"><a href="#secondPage">Menu 2</a></li>
+          <li data-menuanchor="3rdPage"><a href="#3rdPage">Menu 3</a></li>
+          <li data-menuanchor="4rdPage"><a href="#4rdPage">Menu 4</a></li>
+          <li><button id="btnAdd" class="btn btn-primary d-none">Installer la PWA</button></li>
+        </ul>
+  
+    
+        <div id="fullpage">
+
+          <div class="section active" id="section0">
+            <h1 id="lien1">LIEN</h1>
+          </div>
+        
+          <div class="section" id="section1">
+                <div class="slide active" id="first-slide">
+                  <h1>Slide active</h1>
+                </div>
+        
+                <div class="slide" id="second-slide">
+                  <h1 id="lien2">LIEN slide 2</h1>
+                </div>
+        
+                <div class="slide" id="tree-slide">
+                  <h1>Slide 3</h1>
+                </div>
+        
+                <div class="slide" id="last-slide">
+                  <h1>Dernière slide</h1>
+                </div>
+          </div>
+          
+          <div class="section" id="section2">
+            <div class="slide active" id="premier-slide">
+              <h1>Section 2 - slide 1</h1>
+            </div>
+        
+            <div class="slide" id="deuxieme-slide">
+              <div class="container mep">
+                <div class="row">
+                  <div class="col-8">
+                    <h1 class="titre-mep">Titre : Section 2 slide 2</h1>
+                    <p class="span-mep">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, incidunt ipsam sed alias ipsum qui sint nam quas. Mollitia hic quia optio ad explicabo qui provident? Error cumque ad fugiat?</p>
+                  </div>
+                  <div class="col-4"><img src="img/main.jpg" alt="image" class="imgcol"></div>
+                </div>
+              </div>
+            </div>
+        
+            <div class="slide" id="troisieme-slide">
+              <h1 id="lien3">LIEN section 2 slide 3</h1>
+            </div>
+          </div>
+        
+          <div class="section" id="section3">
+            <h1 id="lien4">LIEN</h1>
+          </div>
+
+        </div>   <!--fullpage-->
+</body>
+
+
+<!--script-->
+
+<script src="js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/fullpage.js"></script>
+
+
+<script type="text/javascript">
+	var myFullpage = new fullpage('#fullpage', {
+    // sectionsColor: ['rgb(155, 155, 233)', '#4BBFC3', 'rgb(0, 83, 238)', 'whitesmoke', '#ccddff'],
+    menu: '#menu',
+    anchors: ['firstPage', 'secondPage', '3rdPage', '4rdPage'],
+
+
+    afterLoad: function(){
+    var monobjet = fullpage_api.getActiveSection();
+    console.log(monobjet.item.id)
+
+    if (monobjet.item.id == "section3") {
+        console.log("derniere page !");
+      }
+
+    },
+
+    afterSlideLoad: function(){
+    var monobjet2 = fullpage_api.getActiveSlide();
+    console.log(monobjet2.item.id)
+
+      if (monobjet2.item.id == "troisieme-slide") {
+        console.log("dernière slide");
+      }
+
+      if (monobjet2.item.id == "deuxieme-slide") {
+        $('.fp-prev').addClass('blue');
+      }
+    },
+
+    onSlideLeave: function(){
+      var monobjet3 = fullpage_api.getActiveSlide();
+    console.log('a quitté '+monobjet3.item.id)
+
+    if (monobjet3.item.id == "deuxieme-slide") {
+      $('.fp-prev').removeClass('blue');
+      }
+
+    },
+
+    onLeave: function(){
+    var monobjet4 = fullpage_api.getActiveSection();
+    console.log('a quitté section '+monobjet4.item.id)
+
+    if (monobjet4.item.id == "section2") {
+      $('.fp-prev').removeClass('blue');
+      }
+    }
+
+
+  });
+  
+  $('#lien1').click(function(e){
+    e.preventDefault();
+    console.log('click lien 1');
+    fullpage_api.moveTo(2, 1);
+  });
+
+  $('#lien2').click(function(e){
+    e.preventDefault();
+    console.log('click lien 2');
+    fullpage_api.silentMoveTo(3, 2);
+  });
+
+  $('#lien3').click(function(e){
+    e.preventDefault();
+    console.log('click lien 3');
+    fullpage_api.silentMoveTo(4);
+  });
+
+  $('#lien4').click(function(e){
+    e.preventDefault();
+    console.log('click lien 4');
+    fullpage_api.moveTo(1);
+  });
+  
+</script>
+
+<script src="sw.js"></script>
+<script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker
+               .register('/sw.js')
+               .then(function() { console.log("Service Worker Registered"); });
+    }
+
+
+    // fonction qui check si appli installable
+    window.addEventListener('beforeinstallprompt', (e) => {
+        console.log("beforeinstallprompt");
+    // Stash the event so it can be triggered later.
+    deferredPrompt = e;
+    // Update UI notify the user they can add to home screen
+    showInstallPromotion();
+
+});
+
+function  showInstallPromotion() {
+  //  alert("ok on peut installer");
+
+   $('#btnAdd').removeClass('d-none');
+
+}
+
+var btnAdd = document.getElementById("btnAdd");
+
+btnAdd.addEventListener('click', (e) => {
+  // hide our user interface that shows our A2HS button
+  btnAdd.style.display = 'none';
+  // Show the prompt
+  deferredPrompt.prompt();
+  // Wait for the user to respond to the prompt
+  deferredPrompt.userChoice
+    .then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt');
+      } else {
+        console.log('User dismissed the A2HS prompt');
+      }
+      deferredPrompt = null;
+    });
+});
+   
+</script>
+
+<script src="js/scripts.js"></script>
+</html>
