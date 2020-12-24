@@ -57,7 +57,24 @@
 body {
   width: 100%;
   height: 100%;
-  background-color: #f7c7ef;
+  background-color: #161616;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #4304d6;
+  text-decoration: none;
+}
+
+h2 {
+  color: #4304d6;
+  font-family: 'cinzelblack';
+  font-size: 5em;
+  font-weight: 800;
+  text-align: center;
 }
 
 header {
@@ -71,7 +88,7 @@ header {
 }
 
 .open {
-  background-color: #3c3c3c;
+  background-color: #4304d6;
   width: 24px;
   height: 4px;
   display: block;
@@ -79,11 +96,12 @@ header {
   cursor: pointer;
   position: relative;
   top: 8px;
+  z-index: inherit;
 }
 
 .open:before {
   content: "";
-  background-color: #3c3c3c;
+  background-color: #4304d6;
   width: 24px;
   height: 4px;
   display: block;
@@ -98,7 +116,7 @@ header {
 
 .open:after {
   content: "";
-  background-color: #3c3c3c;
+  background-color: #4304d6;
   width: 24px;
   height: 4px;
   display: block;
@@ -118,6 +136,7 @@ header {
   padding: 15px;
   cursor: pointer;
   float: right;
+  z-index: 3;
 }
 
 .menuOpen:hover .open:before {
@@ -211,6 +230,7 @@ header {
   visibility: hidden;
   -webkit-transition: opacity 0.5s, visibility 0.5s;
   transition: opacity 0.5s, visibility 0.5s;
+  z-index: 2;
 }
 
 .menuEffects ul {
@@ -260,15 +280,107 @@ header {
 #menuToggle:not(:checked) ~ .menuEffects ul {
   -webkit-transform: translateY(-30%);
           transform: translateY(-30%);
+  z-index: 2;
 }
 
 main {
   min-height: 200px;
-  background-color: #d83737;
+  background-color: #161616;
+  padding-bottom: 10rem;
+}
+
+.ul_program {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+.li_program {
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+.content {
+  padding: 10px;
+  margin-bottom: 3rem;
+}
+
+.opacity-color {
+  background: #4304d6;
+  width: 50vh;
+}
+
+.opacity-color-img {
+  width: 100%;
+  opacity: .5;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  position: unset !important;
+}
+
+.opacity-color:hover .opacity-color-img {
+  opacity: 1;
+}
+
+.h3-program {
+  color: #FFB81C;
+  font-family: 'cinzelblack';
+  font-weight: 600;
+  font-size: 80px;
+  margin-top: -200px;
+  margin-bottom: 120px;
+  margin-left: -30px;
+  position: relative;
+}
+
+.h4-program {
+  color: #FFB81C;
+  font-weight: 400;
+}
+
+.h5-program {
+  color: #FFB81C;
+  text-transform: uppercase;
+  font-weight: 200;
 }
 
 footer {
-  min-height: 50px;
-  background-color: #3c3c3c;
+  min-height: 300px;
+  background-color: #161616;
+  background-image: url(../img/motif-j.png);
+  background-size: contain;
+  padding-top: 100px;
+}
+
+.h6 {
+  color: white;
+  font-size: 50px;
+}
+
+#social_media {
+  background-color: #161616;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.social-icon {
+  padding: 0.6rem 0.6rem;
+  color: white;
+  -webkit-transition: color 140ms ease;
+  transition: color 140ms ease;
+  margin: 0 0.4rem;
+  font-size: 30px;
+}
+
+#ul_menu_footer {
+  background-color: #161616;
+  font-size: 25px;
+  margin-bottom: 3rem;
 }
 /*# sourceMappingURL=style.css.map */
