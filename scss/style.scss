@@ -1,15 +1,23 @@
+@import '_variables.scss';
 @import '_fonts.scss';
 
-$white:rgb(255, 255, 255);
-$black: #161616;
-$cyan:#11FFEE;
-$bleu:rgb(67, 4, 214);
-$jaune:#FFB81C;
+#resolution{
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+}
 
-body{
+
+html,body{
     width: 100%;
     height: 100%;
     background-color: $black;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a{
@@ -19,9 +27,19 @@ a:hover{
   color: $bleu;
   text-decoration: none;
 }
+
+//--------------------------------------- main ---------------------------------------------------
+
+main{
+  min-height: 200px;
+  background-color: $black;
+  padding-bottom: 10rem;
+  height: 100%;
+ 
+}
 //--------------------------------------- titres ---------------------------------------------------
 
-h2{
+h2,.h2{
   color:$bleu;
   font-family: 'cinzelblack';
   font-size: 5em;
@@ -29,25 +47,30 @@ h2{
   text-align: center;
 }
 
-
+h3,h4{
+  font-family: 'cinzelblack';
+  font-weight: 800;
+  color:$bleu;
+}
 
 
 
 //--------------------------------------- header ---------------------------------------------------
 header{
-  background-color: $cyan;
+ 
   min-height: 5rem;
   padding: 1rem;
 }
 
 
 //--------------------------------------- menu ---------------------------------------------------
+
 .input-menu{
     display: none;
   }
   
 .open{
-    background-color: $bleu;
+    background-color: $white;
     width: 24px;
     height: 4px;
     display: block;
@@ -60,7 +83,7 @@ header{
   
 .open:before{
     content: "";
-    background-color: $bleu;
+    background-color: $white;
     width: 24px;
     height: 4px;
     display: block;
@@ -73,7 +96,7 @@ header{
   
 .open:after{
     content: "";
-    background-color: $bleu;
+    background-color: $white;
     width: 24px;
     height: 4px;
     display: block;
@@ -91,7 +114,7 @@ header{
     padding: 15px;
     cursor: pointer;
     float: right;
-    z-index: 3;
+    z-index: 555;
   }
   
 .menuOpen:hover .open:before{
@@ -123,10 +146,10 @@ header{
   
 .menu .menuContent{
     position: relative;
-    top: 15%;
+    top: 10%;
     font-size: 54px;
     text-align: center;
-    padding-bottom: 20px;
+    
   }
   
 .menu ul{
@@ -148,12 +171,6 @@ header{
   }
   
 $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s; 
-
-// .menu ul li a:hover{
-//     color: #11FFEE;
-//     text-shadow: none;
-//     text-decoration: line-through;
-//   }
 
 .a-menu{
     text-decoration: none;
@@ -192,7 +209,7 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s, visibility 0.5s;
-    z-index: 2;
+    z-index: 9;
   }
   
 .menuEffects ul{
@@ -221,7 +238,7 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 1;
+    z-index: 8;
   }
   
 #menuToggle:checked ~ .menuOpen .open:after{
@@ -231,22 +248,15 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
     position: relative;
     top: 0;
     right: 0;
-    z-index: 1;
+    z-index: 12;
   }
   
 #menuToggle:not(:checked) ~ .menuEffects ul{
     transform: translateY(-30%);
-    z-index: 2;
+    z-index: 12;
   }
 
-//--------------------------------------- main ---------------------------------------------------
 
-main{
-  min-height: 200px;
-  background-color: $black;
-  padding-bottom: 10rem;
- 
-}
 
 
 
@@ -268,11 +278,8 @@ main{
 .content{
   padding: 10px;
   margin-bottom: 3rem;
-
-  
+ 
 }
-
-
 
 .opacity-color{
   background: $bleu;
@@ -302,66 +309,373 @@ main{
   margin-left: -30px;
   position: relative;
   
-
 }
 
 .h4-program{
   color:$jaune;
   font-weight: 400;
-  
-  
 
 }
 .h5-program{
   color:$jaune;
   text-transform: uppercase;
-  font-weight: 200;
- 
+  font-weight: 200; 
+}
+
+//--------------------------------------- page agenda ---------------------------------------------------
+//code : http://jsfiddle.net/i_heart_php/gby8ehoc/ => + mes modifs !
+
+th{
+  color:$bleu;
+}
+
+//------------ Dates
+.agenda .agenda-date { 
+  width: 170px; 
+}
+
+.agenda .agenda-date .dayofmonth {
+  width: 40px;
+  font-size: 36px;
+  line-height: 36px;
+  float: left;
+  text-align: right;
+  margin-right: 10px; 
+  color:$white;
+}
+
+.agenda .agenda-date .shortdate {
+  font-size: 0.75em; 
+  
+}
+.dayofweek{
+  color:$white;
+}
+
+//----------------heure
+.agenda .agenda-time{ 
+  width: 140px;
+  color: $white; 
+
+} 
+
+//------------even
+.agenda .agenda-events{
+    color: rgb(25, 106, 177);
+
+} 
+
+.agenda .agenda-events .agenda-event{
+  color:$white;
+
+}
+
+.agenda_event{
+  color:$jaune;
+}
+
+//------------lieu
+.agenda-lieu{
+  color:$white;
+}
+
+//------------ticket
+
+
+
+
+//--------------------------------------- page even ---------------------------------------------------
+.row-even{
+  width: 120%;
 }
 
 
+.h2even{
+  width: 100vw;
+  text-align: center;
+   
+}
+//------------partie gauche
+.div-titres{
+  margin-top: 100px;
+  margin-bottom: 50px;
+
+}
+.div-video{
+  display: flex;
+ 
+}
+.video{
+  display: inline;
+}
 
 
+//------------partie droite
+.image-even{
+  display: inline-block;
+  position: relative;
+  margin-top: 90px;
+  
+}
+.image-even-img{
+  height: 100%;
+  width: auto;
+}
 
+.text-even{
+  z-index: 2;
+  position: absolute;
+  text-align: center;
+  color: $white;
+  width: 719px;
+  height: 480;
+}
 
+.info-img-date{
+  line-height: 1.15;
+  margin-top: -340px;
+}
 
+.info-img-prix{
+  margin-top: 130px;
+}
 
+.day{
+  font-size: 1.81818rem;
+  margin-right: 10px; 
+}
+
+.hour{
+  font-size: .81818rem;
+  margin-left: 0!important;
+}
+
+//------------ticket
+.even-fluid{
+  padding-left: 0;
+  padding-right: 0;
+}
+.even{
+  background: -webkit-linear-gradient(left, $white 50%, $black 50%);
+  background: -moz-linear-gradient(left, $white 50%, $black 50%);
+  background: -o-linear-gradient(left, $white 50%, $black 50%);
+  background: linear-gradient(to right, $white 50%, $black 50%);
+  margin:0;
+  height: 100vh;
+   
+}
+
+.tickets{
+  margin-top: 550px;
+  float: right;
+}
+
+//---------- tickets CODE : https://codepen.io/folaad/pen/YvmRpz
+.wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.cta{
+  display: flex;
+  padding: 5px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  background: $jaune;
+  transition: 1s;
+  box-shadow: 6px 6px 0 $bleu;
+  transform: skewX(-15deg);
+}
+
+.cta:focus{
+  outline: none; 
+}
+
+.cta:hover{
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 $bleu;
+}
+
+.cta span:nth-child(2){
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta:hover  span:nth-child(2){
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+span{
+  transform: skewX(15deg) 
+}
+
+span:nth-child(2){
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+    
+}
+  
+/**************SVG****************/
+
+path.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+path.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta:hover path.three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover path.one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover path.two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+
+@keyframes color_anim {
+    0% {
+        fill: white;
+    }
+    50% {
+        fill: $bleu;
+    }
+    100% {
+        fill: white;
+    }
+}
+
+//--------------------------------------- page selection ---------------------------------------------------
+.selection{
+  color:$bleu;
+  font-size: 25px;
+  text-align: center;
+}
+
+#selection{
+  position: relative;
+  z-index: 3;
+  padding-top: 50px;
+  margin-bottom:-180px ;
+}
+.sous-titre{
+  text-align: center;
+  color:$white;
+  font-size: 25px;
+  font-weight: 200;
+
+}
 //--------------------------------------- footer ---------------------------------------------------
 
-footer{
-  min-height: 300px;
+footer{ 
+  width:100%; 
+  min-height:250px; 
+  padding:10px 0px 25px 0px;
   background-color: $black;
   background-image:url(../img/motif-j.png);
   background-size: contain;
-  padding-top: 100px;
- 
-
 }
-//--------------------------------------- reseaux sociaux footer
-.h6{
-  color: $white;
-  font-size: 50px;
-}
-
-#social_media{
+.cta-title{
+  color:$bleu;
   background-color: $black;
-  align-items: center;
-  padding: 10px;
-  
+}
+.btn-primary{
+  background-color: $cyan;
+  border-color: $cyan;
+  color: $bleu;
+}
+.btn-primary:hover{
+  background-color: $bleu;
+  border-color: $bleu;
+  color: $cyan;
 }
 
-.social-icon{
-  padding: 0.6rem 0.6rem;
-  color:white;
+.bottom_border{ 
+  border-bottom:1px solid $white; 
+  padding-bottom:20px;
+}
+
+.foote_bottom_ul_amrc{
+    list-style-type:none;
+    padding:0px;
+    display:table;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+}
+
+.foote_bottom_ul_amrc li{ 
+  display:inline;
+}
+
+.foote_bottom_ul_amrc li a{ 
+  color:$white;
+  font-size: 20px; 
+  margin:0 12px;
+  background-color: $black;
+}
+
+.foote_bottom_ul_amrc li a:hover{ 
+  color:$bleu;
+}
+
+.social_footer_ul{ 
+  display:table; 
+  margin:15px auto 0 auto; 
+  list-style-type:none;  
+}
+.social_footer_ul li{ 
+  padding-left:20px; 
+  padding-top:10px; 
+  float:left; }
+
+.social_footer_ul li a{ 
+  color:$white; 
+  border:1px solid $white; 
+  padding:8px;
+  border-radius:50%; 
+  background-color: $black;
+}
+
+.social_footer_ul li a:hover{ 
+  color:$bleu; 
+  border:1px solid $bleu; 
+  padding:8px;
+  border-radius:50%;
   transition: color 140ms ease;
-  margin: 0 0.4rem;
-  font-size: 30px;
-  
+}
+
+.social_footer_ul li i{  
+  width:20px; 
+  height:20px; 
+  text-align:center;
+}
+
+.cta-title{
+  font-size: 40px
 }
 
 
-#ul_menu_footer{
-  background-color: $black;
-  font-size: 25px;
-  margin-bottom: 3rem;
-}
+@import '_XLarge.scss';
+
+@import '_Large.scss';
+@import '_Medium.scss';
+
+@import '_Small.scss';
+@import '_XSmall.scss';
+
+

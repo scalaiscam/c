@@ -1,0 +1,78 @@
+/* Large devices (laptops/desktops, 992px and up) */
+@media (max-width: 992px){
+    #resolution{
+        background-color: rgb(245, 45, 138);}
+    #resolution::after{
+        content:"L (desktops, 992px and up)";}
+
+//--------------------------------------- page even ---------------------------------------------------
+        .ul_program{
+            padding-top:2rem;
+        }
+        
+        .opacity-color{
+            width: auto;
+            
+        }      
+              
+        .h3-program{
+            margin-left: 0;
+            font-size: 60px;
+            margin-top: -150px;
+            margin-bottom: 90px;
+           
+        }
+        .h4-program{
+            font-size: 20px;
+        }
+        h5{
+            font-size: 20px;
+        }
+        .content{
+            margin-bottom: 3rem;
+        }
+
+
+
+
+
+
+        #selection{
+            margin-bottom: 0;
+           
+
+        }
+        .sous-titre{
+            font-size: 20px;
+            margin-bottom: 100px;
+        }
+        .fp-slidesContainer{
+            transform: none;
+        } 
+        .h2{
+            font-size: 3rem;
+        }
+        .selection{
+            font-size: 20px;
+        }
+        .fp-tableCell{
+            display: block!important;
+        }
+        .fp-controlArrow{
+            top:8%!important;
+        }
+//--------------------------------------- footer ---------------------------------------------------
+.cta-title{
+    font-size: 50px;
+}
+
+.foote_bottom_ul_amrc{
+    display: block!important;
+}
+
+.form-control{
+    display: block!important;
+    width:100%!important;
+    
+}
+}

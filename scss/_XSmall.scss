@@ -1,0 +1,32 @@
+/* Small devices (landscape phones, 576px and up)*/
+@media (max-width: 600px){
+
+    
+    #resolution{
+        background-color: rgb(245, 158, 45);}
+    #resolution::after{
+        content:"XS (600px)";}
+
+//--------------------------------------- main ---------------------------------------------------
+main{
+    padding-bottom: 3rem;
+}
+
+//--------------------------------------- titres ---------------------------------------------------
+h2,.h2{
+    font-size: 3em;
+}
+
+.fp-controlArrow{
+    top:30%!important;
+}
+.fp-controlArrow.fp-prev{
+    border-width: 19.25px 17px 19.25px 0!important;
+}
+.fp-controlArrow.fp-next{
+    border-width: 19.25px 0 19.25px 17px !important;
+}
+//--------------------------------------- footer ---------------------------------------------------
+
+
+}

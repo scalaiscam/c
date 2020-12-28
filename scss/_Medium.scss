@@ -1,0 +1,39 @@
+/* Medium devices (landscape tablets, 768px and up) */
+@media (max-width: 768px) { 
+    #resolution{
+        background-color: rgb(120, 122, 247);}
+    #resolution::after{
+        content:"Medium devices (tablets, 768px and up)";}
+
+ //--------------------------------------- menu ---------------------------------------------------
+        .menu .menuContent{
+            font-size:30px;
+        }
+        .a-menu:before{
+            margin-bottom: 30px;
+            height: 3px;
+        }
+//--------------------------------------- page even ---------------------------------------------------
+.h3-program{
+    margin-left: 0;
+    font-size: 40px;
+    margin-top: -100px;
+    margin-bottom: 60px;
+   
+}
+.h4-program{
+    font-size: 15px;
+}
+h5{
+    font-size: 15px;
+}
+
+//--------------------------------------- footer ---------------------------------------------------
+footer{
+    background-size: cover;
+}
+.cta-title{
+    font-size: 40px;
+}
+
+    }

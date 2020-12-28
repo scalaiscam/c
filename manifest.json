@@ -1,0 +1,22 @@
+
+
+{
+    "short_name": "Fullpage Camille",
+    "name": "Fullpage JS",
+    "description": "PWA de démontration crée dans le Lab 3TI web 2020-2021",
+    "icons": [
+      {
+        "src": "/images/icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "any maskable"
+      }
+    ],
+    "start_url": "/index.html",
+    "background_color": "#3367D6",
+    "display": "fullscreen",
+    "theme_color": "#3367D6",
+    "shortcuts": [
+      
+    ]
+  }
