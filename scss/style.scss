@@ -57,14 +57,12 @@ h3,h4{
 
 //--------------------------------------- header ---------------------------------------------------
 header{
- 
   min-height: 5rem;
   padding: 1rem;
 }
 
 
 //--------------------------------------- menu ---------------------------------------------------
-
 .input-menu{
     display: none;
   }
@@ -249,20 +247,15 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
     top: 0;
     right: 0;
     z-index: 12;
-  }
+}
   
 #menuToggle:not(:checked) ~ .menuEffects ul{
     transform: translateY(-30%);
     z-index: 12;
-  }
-
-
-
-
+}
 
 
 //--------------------------------------- page programme ---------------------------------------------------
-
 //menu classer programme
 .ul_program{
   display: flex;
@@ -275,17 +268,16 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
   list-style-type: none;
   text-transform: uppercase;
 }
+
 .content{
   padding: 10px;
   margin-bottom: 3rem;
- 
 }
 
 .opacity-color{
   background: $bleu;
-  width: 50vh;
-  
-  }
+  width: auto;
+}
 
 .opacity-color-img{
   width: 100%;
@@ -297,30 +289,62 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
 
 .opacity-color:hover .opacity-color-img{
   opacity: 1;
-  }
+}
   
-.h3-program{
-  color:$jaune;
+.h3-program,.h3-program-rigth{
+  color:$cyan;
   font-family: 'cinzelblack';
-  font-weight: 600;
-  font-size: 80px;
-  margin-top: -200px;
-  margin-bottom: 120px;
-  margin-left: -30px;
-  position: relative;
+  font-weight: 600; 
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-top: 5rem;
+}
+.h3-program-rigth,.h4-program-rigth,.h5-program-rigth{
+  text-align: end;
+}
+.trait{
+  width: 100%;
+  border-top: 2px solid $cyan;
+  margin-bottom: 2rem;
+
+}
+
+.h4-program,.h4-program-rigth{
+  color:$white;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
   
 }
 
-.h4-program{
-  color:$jaune;
-  font-weight: 400;
-
-}
-.h5-program{
-  color:$jaune;
+.h5-program,.h5-program-rigth{
+  color:$white;
   text-transform: uppercase;
   font-weight: 200; 
+  font-family: 'Montserrat', sans-serif;
+ 
 }
+
+
+#more{
+  display: none;
+}
+
+.top{
+  margin-top: 5rem;
+}
+
+.carre{
+  width: 20em;
+  height: 20em;
+  object-fit: cover;
+  margin-right: auto;
+  margin-left: auto;
+  
+
+}
+
+
 
 //--------------------------------------- page agenda ---------------------------------------------------
 //code : http://jsfiddle.net/i_heart_php/gby8ehoc/ => + mes modifs !
@@ -385,41 +409,64 @@ th{
 
 
 //--------------------------------------- page even ---------------------------------------------------
+.fp-controlArrow.fp-next{
+  border-color:transparent transparent transparent $bleu!important;
+}
+.fp-controlArrow.fp-prev{
+  border-color:transparent $bleu transparent transparent!important;
+}
 .row-even{
   width: 120%;
 }
 
-
 .h2even{
-  width: 100vw;
-  text-align: center;
-   
+  position: absolute;
+  text-align: center; 
+  z-index: 2; 
+  color:$black;
+  margin-left: -283px; 
+  text-transform: uppercase;
 }
+.blanc{
+  color:$white;
+}
+.white{
+  padding-right: 5em;
+  padding-left: 5em;
+  padding-top: 12rem;
+}
+.black{
+  padding-left:0;
+}
+
 //------------partie gauche
 .div-titres{
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 2em;
+  margin-top: 6em;
+  text-transform: uppercase;
+}
 
-}
-.div-video{
-  display: flex;
- 
-}
 .video{
-  display: inline;
+  width: 100%;
+  height: 400px;
+  padding-right: 25px;
 }
 
-
+.div-credit{
+  text-align: justify;
+  padding-top: 2em;
+  padding-right: 3em;
+}
 //------------partie droite
 .image-even{
   display: inline-block;
   position: relative;
-  margin-top: 90px;
-  
+  margin-top: 50px; 
 }
 .image-even-img{
-  height: 100%;
-  width: auto;
+  width: 700px;
+  height: 750px;
+  object-fit: cover;
 }
 
 .text-even{
@@ -433,23 +480,32 @@ th{
 
 .info-img-date{
   line-height: 1.15;
-  margin-top: -340px;
+  z-index: 2;
+  margin-top: -470px;
+  text-align: center;
+}
+
+.info-texte{
+  line-height: 1.35;
+  text-align: justify;
 }
 
 .info-img-prix{
-  margin-top: 130px;
+  margin-top: 2rem;
 }
 
 .day{
-  font-size: 1.81818rem;
+  font-size: 2.81818rem;
   margin-right: 10px; 
 }
 
 .hour{
-  font-size: .81818rem;
+  font-size: 1.81818rem;
   margin-left: 0!important;
 }
-
+.price,.min{
+  font-size: 1.3rem;
+}
 //------------ticket
 .even-fluid{
   padding-left: 0;
@@ -461,19 +517,24 @@ th{
   background: -o-linear-gradient(left, $white 50%, $black 50%);
   background: linear-gradient(to right, $white 50%, $black 50%);
   margin:0;
-  height: 100vh;
-   
+  height: 100%;   
 }
 
-.tickets{
-  margin-top: 550px;
-  float: right;
+
+.info_even{
+  background-color: $black;
+  color:$white;
+  padding:5rem;
+  margin-top: 5rem;
 }
+
 
 //---------- tickets CODE : https://codepen.io/folaad/pen/YvmRpz
 .wrapper{
   display: flex;
   justify-content: center;
+  
+  margin-top: 50px;
 }
 
 .cta{
@@ -514,11 +575,10 @@ span{
 span:nth-child(2){
   width: 20px;
   margin-left: 30px;
-  position: relative;
-    
+  position: relative;   
 }
   
-/**************SVG****************/
+//--------SVG-----------
 
 path.one {
   transition: 0.4s;
@@ -544,8 +604,7 @@ path.two {
   animation: color_anim 1s infinite 0.4s;
 }
 
-/* SVG animations */
-
+//-------- SVG animations -------
 @keyframes color_anim {
     0% {
         fill: white;
@@ -557,6 +616,17 @@ path.two {
         fill: white;
     }
 }
+
+//-----
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span{
+  display: none;
+}
+
+
+
+
+
 
 //--------------------------------------- page selection ---------------------------------------------------
 .selection{
@@ -578,6 +648,12 @@ path.two {
   font-weight: 200;
 
 }
+
+
+
+
+
+
 //--------------------------------------- footer ---------------------------------------------------
 
 footer{ 
