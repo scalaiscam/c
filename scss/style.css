@@ -1,59 +1,5 @@
-@font-face {
-  font-family: 'cinzelbold';
-  src: url("fonts/cinzel-bold-webfont.woff2") format("woff2"), url("fonts/cinzel-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'cinzelblack';
-  src: url("fonts/cinzel-black-webfont.woff2") format("woff2"), url("fonts/cinzel-black-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'cinzelbold';
-  src: url("fonts/cinzel-bold-webfont.woff2") format("woff2"), url("fonts/cinzel-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'cinzelregular';
-  src: url("fonts/cinzel-regular-webfont.woff2") format("woff2"), url("fonts/cinzel-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'montserratbold';
-  src: url("fonts/montserrat-bold-webfont.woff2") format("woff2"), url("fonts/montserrat-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'montserratlight';
-  src: url("fonts/montserrat-light-webfont.woff2") format("woff2"), url("fonts/montserrat-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'montserratmedium';
-  src: url("fonts/montserrat-medium-webfont.woff2") format("woff2"), url("fonts/montserrat-medium-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'montserratregular';
-  src: url("fonts/montserrat-regular-webfont.woff2") format("woff2"), url("fonts/montserrat-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 #resolution {
   position: absolute;
   z-index: 999;
@@ -382,7 +328,7 @@ header {
 }
 
 .top {
-  margin-top: 5rem;
+  margin-top: 10rem;
 }
 
 .carre {
@@ -392,6 +338,30 @@ header {
      object-fit: cover;
   margin-right: auto;
   margin-left: auto;
+}
+
+.info-lieux {
+  color: #EAE2E0;
+}
+
+.carre-lieux {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 30rem;
+}
+
+.location {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.h3-lieux {
+  color: #11FFEE;
+  font-family: 'cinzelblack';
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-top: 3rem;
 }
 
 th {
@@ -441,12 +411,8 @@ th {
   color: #EAE2E0;
 }
 
-.fp-controlArrow.fp-next {
-  border-color: transparent transparent transparent #4410ff !important;
-}
-
-.fp-controlArrow.fp-prev {
-  border-color: transparent #4410ff transparent transparent !important;
+#section2 {
+  margin-top: 10rem;
 }
 
 .row-even {
@@ -467,8 +433,6 @@ th {
 }
 
 .white {
-  padding-right: 5em;
-  padding-left: 5em;
   padding-top: 12rem;
 }
 
@@ -478,20 +442,18 @@ th {
 
 .div-titres {
   margin-bottom: 2em;
-  margin-top: 6em;
   text-transform: uppercase;
 }
 
 .video {
   width: 100%;
-  height: 400px;
+  height: 500px;
   padding-right: 25px;
 }
 
 .div-credit {
   text-align: justify;
-  padding-top: 2em;
-  padding-right: 3em;
+  padding: 20px;
 }
 
 .image-even {
@@ -501,7 +463,6 @@ th {
 }
 
 .image-even-img {
-  width: 700px;
   height: 750px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -512,7 +473,7 @@ th {
   position: absolute;
   text-align: center;
   color: #EAE2E0;
-  width: 719px;
+  width: 100%;
   height: 480;
 }
 
@@ -526,6 +487,8 @@ th {
 .info-texte {
   line-height: 1.35;
   text-align: justify;
+  color: #EAE2E0;
+  padding: 20px;
 }
 
 .info-img-prix {
@@ -707,6 +670,14 @@ path.two {
   font-weight: 200;
 }
 
+.fp-controlArrow.fp-next {
+  border-color: transparent transparent transparent #4410ff !important;
+}
+
+.fp-controlArrow.fp-prev {
+  border-color: transparent #4410ff transparent transparent !important;
+}
+
 footer {
   width: 100%;
   min-height: 250px;
@@ -805,16 +776,13 @@ footer {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media (max-width: 1200px) {
   #resolution {
-    background-color: #2ddef5;
+    background-color: #0a96a8;
   }
   #resolution::after {
     content: "XL (1200px)";
   }
   .row-even {
     width: auto;
-  }
-  .image-even-img {
-    height: auto;
   }
 }
 
@@ -851,6 +819,26 @@ footer {
   }
   .fp-controlArrow {
     top: 8% !important;
+  }
+  .white {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 8rem;
+  }
+  .video {
+    padding-right: inherit;
+  }
+  .image-even-img {
+    height: 700px;
+  }
+  #section2 {
+    margin-top: 6rem;
+  }
+  .carre-lieux {
+    height: 100%;
   }
   .cta-title {
     font-size: 50px;
@@ -902,6 +890,38 @@ footer {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+  .even {
+    background: #161616;
+  }
+  .reverse {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+  .div-credit {
+    color: #EAE2E0;
+  }
+  #section2 {
+    margin-top: 4rem;
+  }
+  .h2even {
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+    color: #EAE2E0;
+  }
+  .black {
+    padding-left: 15px;
+  }
+  .carre-lieux {
+    max-height: 20rem;
+  }
+  .top {
+    margin-top: 8rem;
+  }
+  .location {
+    padding-left: 0;
+    padding-right: 0;
+  }
   footer {
     background-size: cover;
   }
@@ -918,15 +938,18 @@ footer {
   #resolution::after {
     content: "S (600px)";
   }
+  footer {
+    margin-top: 5rem;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up)*/
-@media (max-width: 600px) {
+@media (max-width: 450px) {
   #resolution {
     background-color: #f59e2d;
   }
   #resolution::after {
-    content: "XS (600px)";
+    content: "XS (450px)";
   }
   main {
     padding-bottom: 3rem;
@@ -942,6 +965,9 @@ footer {
   }
   .fp-controlArrow.fp-next {
     border-width: 19.25px 0 19.25px 17px !important;
+  }
+  .h2even {
+    margin-top: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

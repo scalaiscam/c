@@ -1,5 +1,5 @@
 @import '_variables.scss';
-@import '_fonts.scss';
+
 
 #resolution{
   position: absolute;
@@ -277,6 +277,7 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
 .opacity-color{
   background: $bleu;
   width: auto;
+  
 }
 
 .opacity-color-img{
@@ -306,32 +307,28 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
   width: 100%;
   border-top: 2px solid $cyan;
   margin-bottom: 2rem;
-
 }
 
 .h4-program,.h4-program-rigth{
   color:$white;
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.2em;
-  
+  font-size: 1.2em; 
 }
 
 .h5-program,.h5-program-rigth{
   color:$white;
   text-transform: uppercase;
   font-weight: 200; 
-  font-family: 'Montserrat', sans-serif;
- 
+  font-family: 'Montserrat', sans-serif; 
 }
-
 
 #more{
   display: none;
 }
 
 .top{
-  margin-top: 5rem;
+  margin-top: 10rem;
 }
 
 .carre{
@@ -340,12 +337,27 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
   object-fit: cover;
   margin-right: auto;
   margin-left: auto;
-  
-
 }
-
-
-
+//--------------------------------------- page lieux ---------------------------------------------------
+.info-lieux{
+  color:$white;
+}
+.carre-lieux{
+  object-fit: cover;
+  height: 30rem;
+}
+.location{
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.h3-lieux{
+  color:$cyan;
+  font-family: 'cinzelblack';
+  font-weight: 600; 
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-top: 3rem;
+}
 //--------------------------------------- page agenda ---------------------------------------------------
 //code : http://jsfiddle.net/i_heart_php/gby8ehoc/ => + mes modifs !
 
@@ -409,11 +421,8 @@ th{
 
 
 //--------------------------------------- page even ---------------------------------------------------
-.fp-controlArrow.fp-next{
-  border-color:transparent transparent transparent $bleu!important;
-}
-.fp-controlArrow.fp-prev{
-  border-color:transparent $bleu transparent transparent!important;
+#section2{
+  margin-top: 10rem;
 }
 .row-even{
   width: 120%;
@@ -431,8 +440,6 @@ th{
   color:$white;
 }
 .white{
-  padding-right: 5em;
-  padding-left: 5em;
   padding-top: 12rem;
 }
 .black{
@@ -442,20 +449,18 @@ th{
 //------------partie gauche
 .div-titres{
   margin-bottom: 2em;
-  margin-top: 6em;
   text-transform: uppercase;
 }
 
 .video{
   width: 100%;
-  height: 400px;
+  height: 500px;
   padding-right: 25px;
 }
 
 .div-credit{
   text-align: justify;
-  padding-top: 2em;
-  padding-right: 3em;
+  padding: 20px;
 }
 //------------partie droite
 .image-even{
@@ -464,7 +469,6 @@ th{
   margin-top: 50px; 
 }
 .image-even-img{
-  width: 700px;
   height: 750px;
   object-fit: cover;
 }
@@ -474,7 +478,7 @@ th{
   position: absolute;
   text-align: center;
   color: $white;
-  width: 719px;
+  width: 100%;
   height: 480;
 }
 
@@ -488,6 +492,8 @@ th{
 .info-texte{
   line-height: 1.35;
   text-align: justify;
+  color:$white;
+  padding: 20px;
 }
 
 .info-img-prix{
@@ -623,11 +629,6 @@ path.two {
   display: none;
 }
 
-
-
-
-
-
 //--------------------------------------- page selection ---------------------------------------------------
 .selection{
   color:$bleu;
@@ -648,14 +649,16 @@ path.two {
   font-weight: 200;
 
 }
-
-
-
+.fp-controlArrow.fp-next{
+  border-color:transparent transparent transparent $bleu!important;
+}
+.fp-controlArrow.fp-prev{
+  border-color:transparent $bleu transparent transparent!important;
+}
 
 
 
 //--------------------------------------- footer ---------------------------------------------------
-
 footer{ 
   width:100%; 
   min-height:250px; 
@@ -746,6 +749,14 @@ footer{
 }
 
 
+
+
+
+
+
+
+
+//--------------------------------------- media query ---------------------------------------------------
 @import '_XLarge.scss';
 
 @import '_Large.scss';

@@ -1,11 +1,11 @@
 /* Small devices (landscape phones, 576px and up)*/
-@media (max-width: 600px){
+@media (max-width: 450px){
 
     
     #resolution{
         background-color: rgb(245, 158, 45);}
     #resolution::after{
-        content:"XS (600px)";}
+        content:"XS (450px)";}
 
 //--------------------------------------- main ---------------------------------------------------
 main{
@@ -16,7 +16,6 @@ main{
 h2,.h2{
     font-size: 3em;
 }
-
 .fp-controlArrow{
     top:30%!important;
 }
@@ -26,7 +25,11 @@ h2,.h2{
 .fp-controlArrow.fp-next{
     border-width: 19.25px 0 19.25px 17px !important;
 }
-//--------------------------------------- footer ---------------------------------------------------
+//--------------------------------------- even ---------------------------------------------------
+.h2even{margin-top: 20px;}
+
+
+
 
 
 }

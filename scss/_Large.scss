@@ -10,13 +10,7 @@
             padding-top:2rem;
         }
         
-       
-
-
-
-
-
-
+    
         #selection{
             margin-bottom: 0;
            
@@ -41,6 +35,29 @@
         .fp-controlArrow{
             top:8%!important;
         }
+//--------------------------------------- even ---------------------------------------------------
+.white{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: center;
+    padding-top: 8rem;
+}
+.video{
+    padding-right: inherit;
+}
+.image-even-img{
+    height: 700px;
+}
+
+#section2{
+    margin-top: 6rem;
+}
+
+
+//--------------------------------------- lieux ---------------------------------------------------
+.carre-lieux{
+    height: 100%;
+}
 //--------------------------------------- footer ---------------------------------------------------
 .cta-title{
     font-size: 50px;

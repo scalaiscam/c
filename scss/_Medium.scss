@@ -13,7 +13,7 @@
             margin-bottom: 30px;
             height: 3px;
         }
-//--------------------------------------- page even ---------------------------------------------------
+//--------------------------------------- page program ---------------------------------------------------
 
 .top{
     margin-top: 1rem;
@@ -32,6 +32,42 @@
 .medium{
     display: flex;
     flex-direction: column-reverse;
+}
+
+//--------------------------------------- even ---------------------------------------------------
+.even{
+    background: #161616;
+}
+.reverse{
+    flex-wrap: wrap-reverse;
+}
+.div-credit{
+    color:#EAE2E0;
+}
+#section2{
+    margin-top: 4rem;
+}
+.h2even{
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+    color:#EAE2E0;
+}
+.black{
+    padding-left: 15px;
+}
+
+
+//--------------------------------------- lieux ---------------------------------------------------
+.carre-lieux{
+    max-height: 20rem;
+}
+.top{
+    margin-top: 8rem;
+}
+.location{
+    padding-left: 0;
+    padding-right: 0;
 }
 
 
