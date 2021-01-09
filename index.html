@@ -17,12 +17,35 @@
     <link rel="apple-touch-icon" href="icon/logo.png">
     <!--CSS-->
     <link rel="stylesheet" href="scss/style.css">
+    <!--manifest JSON-->
+    <link rel="manifest" href="/manifest.json">
     <!--fontawesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <title itemprop="name">Brussels Dance Festival</title>
 </head>
 <body>
 <div id="resolution"></div>
+
+    <div class="container-fluid">
+        <div class="backparallax">
+            <div class="container scene-parallax">
+               
+                    <div id="scene" class="scene">
+                        <div data-depth="0.60"><img src="layers/rect-blanc.png" width="420" height="auto"></div>
+                        <div data-depth="0.40"><img src="layers/rect-jaune.png" width="420" height="auto"></div>    
+                        <div data-depth="-0.50"><img src="layers/pers05.png" width="420" height="auto"></div>
+                        <div data-depth="-0.20"><img src="layers/pers04.png" width="420" height="auto"></div>
+                        <div data-depth="0.10"><img src="layers/pers02.png" width="420" height="auto"></div>
+                        <div data-depth="0.20"><img src="layers/pers01.png" width="420" height="auto"></div>
+                        <div data-depth="0.30"><img src="layers/rect-cyan.png" width="420" height="auto"></div>
+                            
+                    </div><!-- scene -->
+               
+            </div><!-- container scene-parallax -->
+        </div><!-- backparallax -->
+    </div><!-- container-fluid -->
+
+
     <header>
         <div id="menuArea">
             <input type="checkbox" id="menuToggle" class="input-menu"></input>
@@ -43,59 +66,8 @@
                     </ul>
                 </div><!--menuContent-->
             </div><!--menuToggle-->
-        </div><!--menuArea-->
+        </div><!--menuArea-->  
     </header>
-
-<div class="container-fluid">
-
-        <main>
-          <div class="container">
-              <h2>Brussels Dance</h2>
-          </div><!--container-->
-            
-        </main>
-
-       
-
-   
-
-    </div><!--container-fluid-->
-
-    <footer class="footer">
-        <div class="container bottom_border">
-            <div class="container text-center py-4">
-                <h1 class="cta-title">Call to action</h1>
-                <form class="cta-form form-inline my-5 justify-content-center mx-auto">
-    
-                    <label class="sr-only" for="email">Your email address</label>
-                    <input type="text" class="form-control mb-3 mb-lg-0 mr-lg-3" id="email" placeholder="Email">
-    
-                    <label class="sr-only" for="pswd">Create Password</label>
-                    <input type="password" class="form-control mb-4 mb-lg-0 mr-lg-3" id="pswd" placeholder="Create Password">
-    
-                    <button class="btn btn-primary px-4">Sign Up</button>
-                </form>
-            </div><!--container text-center py-4-->
-        </div><!--container bottom_border-->
-    
-        <div class="container">
-            <ul class="foote_bottom_ul_amrc">
-                <li><a href="index.html">Brussels Dance</a></li>
-                <li><a href="program.html">Programme</a></li>
-                <li><a href="agenda.html">Agenda</a></li>
-                <li><a href="lieux.html">Lieux</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="partenaires.html">Partenaires</a></li>
-                <li><a href="selection.html">Sélection</a></li>
-            </ul><!--foote_bottom-->
-    
-            <ul class="social_footer_ul">
-                <li class="nav-item"><a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li class="nav-item"><a class="social-icon" href="#"><i class="fab fa-instagram"></i></a></li>
-                <li class="nav-item"><a class="social-icon" href="#"><i class="fab fa-youtube"></i></a></li>
-            </ul><!--social_footer_ul ends here-->
-        </div>
-    </footer>
 
 
 <!-- Scripts -->
@@ -103,5 +75,13 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/scripts.js"></script>
 <script src="https://kit.fontawesome.com/2c0c67d28b.js" crossorigin="anonymous"></script>
+<script src="js/parallax.min.js"></script>
+<script>
+
+    // Pretty simple huh?
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
+  
+</script>
 </body>
 </html>
