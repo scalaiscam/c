@@ -108,7 +108,6 @@ header{
   padding-right: 3rem;
   position: relative;
   background-color: #161616;
-  background-image: url(/img/logo-header.png);
   height: 3rem;
   display: block;
 }
@@ -122,10 +121,14 @@ header{
   margin-right: auto;
 }
 #logo-img{
-  width: 20%;
+  margin-top: 15px;
+  margin-left: 20px;
+  padding: 5px;
+  width: 5%;
+  height: auto;
   z-index: 888;
   margin-right: auto;
-  margin-top: -125px;
+  
 }
 
 
