@@ -32,17 +32,22 @@ img{
   width: 100%;
 }
 
+.butter{
+  position: relative;
+  width: 100%;
+}
+.center{
+  text-align: center;
+}
 //--------------------------------------- main ---------------------------------------------------
-
 main{
   min-height: 200px;
   background-color: $black;
   padding-bottom: 10rem;
   height: 100%;
- 
 }
-//--------------------------------------- titres ---------------------------------------------------
 
+//--------------------------------------- titres ---------------------------------------------------
 h2,.h2{
   color:$black;
   font-family: 'cinzelblack';
@@ -53,6 +58,7 @@ h2,.h2{
   -webkit-text-stroke: 2px;
   -webkit-text-stroke-color: $bleu;
   text-transform: uppercase;
+  margin-top: 5rem;
 }
 
 h3,h4{
@@ -61,24 +67,62 @@ h3,h4{
   color:$bleu;
 }
 
-
 //--------------------------------------- header ---------------------------------------------------
 header{
   min-height: 5rem;
   padding: 1rem;
+  padding-right: 3rem;
+  position: relative;
+  background-color: $black;
 }
+
 .img-logo{
   width: 100px;
   height: auto;
-
 }
 .logo{
   width: 100px;
   margin-left: auto;
   margin-right: auto;
 }
+//--------------------------------------- button top ---------------------------------------------------
 
-
+#buttontop {
+  display: inline-block;
+  background-color: $jaune;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#buttontop::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: $white;
+}
+#buttontop:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#buttontop:active {
+  background-color: #555;
+}
+#buttontop.show {
+  opacity: 1;
+  visibility: visible;
+}
 
 //--------------------------------------- parallax ---------------------------------------------------
 .backparallax{
@@ -86,8 +130,7 @@ header{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 600px;
-
+  height: 100%;
 }
 .scene-parallax{
   margin: 0 auto;
@@ -96,86 +139,135 @@ header{
   position: relative;
   height: 100%;
 }
-.scene{
-  margin: 0;
-  padding: 0;
-    }
-   
+//--------------------------------------- home ---------------------------------------------------
+.home{
+  color:$white;
+  font-size: 30px;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 2rem;
+}
 
-.fill {
-  bottom: 5%;
-  left: 5%;
-  position: absolute;
-  right: 5%;
-  top: 5%;
-    }
-    
-.expand-width {
+//--------------------------------------- faq ---------------------------------------------------
+
+.faq-title h2 {
+position: relative;
+margin-bottom: 45px;
+display: inline-block;
+font-weight: 600;
+line-height: 1;
+}
+
+.faq-title p {
+padding: 0 190px;
+margin-bottom: 10px;
+}
+
+.faq {
+background: $white;
+border-radius: 4px;
+}
+
+.faq .card {
+border: none;
+background: none;
+border-bottom: 1px dashed $cyan;
+}
+
+.faq .card .card-header {
+padding: 0px;
+border: none;
+background: none;
+-webkit-transition: all 0.3s ease 0s;
+-moz-transition: all 0.3s ease 0s;
+-o-transition: all 0.3s ease 0s;
+transition: all 0.3s ease 0s;
+}
+
+.faq .card .card-header:hover {
+  background:#11ffef7c;
+  padding-left: 10px;
+}
+.faq .card .card-header .faq-title {
+width: 100%;
+text-align: left;
+padding: 0px;
+padding-left: 30px;
+padding-right: 30px;
+font-weight: 400;
+font-size: 15px;
+letter-spacing: 1px;
+color: $bleu;
+text-decoration: none !important;
+-webkit-transition: all 0.3s ease 0s;
+-moz-transition: all 0.3s ease 0s;
+-o-transition: all 0.3s ease 0s;
+transition: all 0.3s ease 0s;
+cursor: pointer;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.faq .card .card-header .faq-title .badge {
+display: inline-block;
+width: 20px;
+height: 20px;
+line-height: 14px;
+-webkit-border-radius: 100px;
+-moz-border-radius: 100px;
+border-radius: 100px;
+text-align: center;
+background: $bleu;
+color: $white;
+font-size: 12px;
+margin-right: 20px;
+}
+
+.faq .card .card-body {
+padding: 30px;
+padding-left: 35px;
+padding-bottom: 16px;
+font-weight: 400;
+font-size: 16px;
+color: $black;
+line-height: 28px;
+letter-spacing: 1px;
+border-top: 1px solid $white;
+}
+
+.faq .card .card-body p {
+margin-bottom: 14px;
+}
+
+//--------------------------------------- video ---------------------------------------------------
+#video{
   width: 100%;
-    }
-    
-.border {
-  border: 2px dashed #00ffaa;
-    }
-    
-.aspect {
-  opacity: 1;
-    }
-    
-.scene > *:nth-child(1) {
-  opacity: 1;
-    }
-    
-.scene > *:nth-child(1) button {
-  -webkit-transform: rotate(150deg);
-          transform: rotate(150deg);
-    }
-    
-.scene > *:nth-child(2) {
-  opacity: 1;
-    }
-    
-.scene > *:nth-child(2) button {
-  -webkit-transform: rotate(120deg);
-          transform: rotate(120deg);
-    }
-    
-.scene > *:nth-child(3) {
-  opacity: 1;
-    }
-    
-.scene > *:nth-child(3) button {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-    }
-    
-.scene > *:nth-child(4) {
-  opacity: 1;
-    }
-    
-.scene > *:nth-child(4) button {
-  -webkit-transform: rotate(60deg);
-          transform: rotate(60deg);
-    }
-    
-.scene > *:nth-child(5) {
-  opacity: 1;
-    }
-    
-.scene > *:nth-child(5) button {
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
-    }
-    
-.scene > *:nth-child(6) {
-  opacity: 1;
-    }
-    
-.scene > *:nth-child(6) button {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-    }
+  height: 100%;
+}
+.video{
+  margin-top: 5rem;
+  margin-bottom: 7rem;
+  
+}
+//--------------------------------------- concours ---------------------------------------------------
+
+#participer{
+  color:$black;
+  text-transform: uppercase;
+}
+.game{
+  background-color:$jaune;
+  background-image:url(../img/motif-j.png);
+  background-size: 100%;
+  max-width: 100%!important;
+  padding: 3em;
+  text-align: center;
+  margin-top: 10rem;
+
+}
+
 //--------------------------------------- menu ---------------------------------------------------
+
 .input-menu{
     display: none;
   }
@@ -367,6 +459,12 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
     z-index: 12;
 }
 
+//------------------------------------------------ footer -------------------------------------------------------------
+
+
+
+
+
 
 //--------------------------------------- page programme ---------------------------------------------------
 //menu classer programme
@@ -421,6 +519,11 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
   border-top: 2px solid $cyan;
   margin-bottom: 2rem;
 }
+.trait-bleu{
+  width: 100%;
+  border-top: 2px solid $bleu;
+  margin-bottom: 2rem;
+}
 
 .h4-program,.h4-program-rigth{
   color:$white;
@@ -471,6 +574,21 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
   text-transform: uppercase;
   margin-top: 3rem;
 }
+#fluid-lieux{
+  padding: 0;
+}
+.black-div {
+  background-color: $black;
+}
+.white-div{
+  background-color: $white;
+}
+.white-div,.black-div{
+  padding:3rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
 //--------------------------------------- page agenda ---------------------------------------------------
 //code : http://jsfiddle.net/i_heart_php/gby8ehoc/ => + mes modifs !
 
@@ -772,34 +890,21 @@ path.two {
 
 
 //--------------------------------------- footer ---------------------------------------------------
-footer{ 
+#main-lieux{
+  padding-bottom: 0;
+}
+footer,.footer{ 
   width:100%; 
   min-height:250px; 
   padding:10px 0px 25px 0px;
-  background-color: $black;
-  background-image:url(../img/motif-j.png);
-  background-size: contain;
+  margin-top: 5rem;
 }
-.cta-title{
-  color:$bleu;
-  background-color: $black;
+#footer-lieux{
+  margin-bottom: 5rem;
 }
-.btn-primary{
-  background-color: $cyan;
-  border-color: $cyan;
-  color: $bleu;
-}
-.btn-primary:hover{
-  background-color: $bleu;
-  border-color: $bleu;
-  color: $cyan;
-}
-
 .bottom_border{ 
-  border-bottom:1px solid $white; 
-  padding-bottom:20px;
+  border-top:2px solid $jaune; 
 }
-
 .foote_bottom_ul_amrc{
     list-style-type:none;
     padding:0px;
@@ -809,22 +914,17 @@ footer{
     margin-bottom: 10px;
     margin-left: auto;
 }
-
 .foote_bottom_ul_amrc li{ 
   display:inline;
 }
-
 .foote_bottom_ul_amrc li a{ 
-  color:$white;
+  color:$jaune;
   font-size: 20px; 
   margin:0 12px;
-  background-color: $black;
 }
-
 .foote_bottom_ul_amrc li a:hover{ 
   color:$bleu;
 }
-
 .social_footer_ul{ 
   display:table; 
   margin:15px auto 0 auto; 
@@ -833,16 +933,15 @@ footer{
 .social_footer_ul li{ 
   padding-left:20px; 
   padding-top:10px; 
-  float:left; }
-
+  float:left; 
+}
 .social_footer_ul li a{ 
-  color:$white; 
-  border:1px solid $white; 
+  color:$jaune; 
+  border:1.5px solid $jaune; 
   padding:8px;
   border-radius:50%; 
-  background-color: $black;
+  text-align: center;
 }
-
 .social_footer_ul li a:hover{ 
   color:$bleu; 
   border:1px solid $bleu; 
@@ -850,23 +949,23 @@ footer{
   border-radius:50%;
   transition: color 140ms ease;
 }
-
 .social_footer_ul li i{  
   width:20px; 
   height:20px; 
   text-align:center;
 }
 
-.cta-title{
-  font-size: 40px
+
+
+
+
+
+.text-noir{
+  color:$black;
 }
-
-
-
-
-
-
-
+.bleu{
+  color:$bleu;
+}
 
 
 //--------------------------------------- media query ---------------------------------------------------

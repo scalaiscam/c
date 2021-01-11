@@ -5,6 +5,33 @@
     #resolution::after{
         content:"L (desktops, 992px and up)";}
 
+
+main{
+    padding-bottom: 4rem;
+}
+        h2{
+            font-size: 3rem;
+        }
+        .home{
+            font-size: 25px;
+        }
+//--------------------------------------- page index ---------------------------------------------------
+.video{
+    margin-bottom: 4rem;
+}
+.game{
+    margin-top: 5rem;
+}
+
+        .faq-concours{
+            display: block;
+        }
+        .col-8{
+            max-width: initial;
+        }
+        .col-4{
+            max-width: initial;
+        }
 //--------------------------------------- page even ---------------------------------------------------
         .ul_program{
             padding-top:2rem;
@@ -59,8 +86,8 @@
     height: 100%;
 }
 //--------------------------------------- footer ---------------------------------------------------
-.cta-title{
-    font-size: 50px;
+footer{
+    background-size: 50%;
 }
 
 .foote_bottom_ul_amrc{

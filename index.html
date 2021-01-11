@@ -15,10 +15,13 @@
     <link sizes="512x512" href="icon/logo.png" rel="icon">
     <!-- safari -->
     <link rel="apple-touch-icon" href="icon/logo.png">
+    <!-- scrolltigre -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+   <!--manifest-->
+   <link rel="manifest" href="/manifest.json">
     <!--CSS-->
     <link rel="stylesheet" href="scss/style.css">
-    <!--manifest JSON-->
-    <link rel="manifest" href="/manifest.json">
     <!--fontawesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <title itemprop="name">Brussels Dance Festival</title>
@@ -26,25 +29,22 @@
 <body>
 <div id="resolution"></div>
 
-    <div class="container-fluid">
-        <div class="backparallax">
-            <div class="container scene-parallax">
-               
-                    <div id="scene" class="scene">
-                        <div data-depth="0.60"><img src="layers/rect-blanc.png" width="420" height="auto"></div>
-                        <div data-depth="0.40"><img src="layers/rect-jaune.png" width="420" height="auto"></div>    
-                        <div data-depth="-0.50"><img src="layers/pers05.png" width="420" height="auto"></div>
-                        <div data-depth="-0.20"><img src="layers/pers04.png" width="420" height="auto"></div>
-                        <div data-depth="0.10"><img src="layers/pers02.png" width="420" height="auto"></div>
-                        <div data-depth="0.20"><img src="layers/pers01.png" width="420" height="auto"></div>
-                        <div data-depth="0.30"><img src="layers/rect-cyan.png" width="420" height="auto"></div>
-                            
-                    </div><!-- scene -->
-               
-            </div><!-- container scene-parallax -->
-        </div><!-- backparallax -->
-    </div><!-- container-fluid -->
+<div class="container-fluid">
 
+    <div class="backparallax butter">
+        <div class="container scene-parallax">
+           
+                <div id="scene" class="scene"> 
+                    <div data-depth="0.60"><img src="layers/rect-blanc.png" width="420" height="auto"></div>
+                    <div data-depth="0.40"><img src="layers/perso-exterieur.png" width="420" height="auto"></div>
+                    <div data-depth="0.10"><img src="layers/perso-int-droit.png" width="420" height="auto"></div>  
+                    <div data-depth="0.20"><img src="layers/rect-jaune.png" width="420" height="auto"></div> 
+                    <div data-depth="0.50"><img src="layers/perso-int-gauch.png" width="420" height="auto"></div>
+                    <div data-depth="0.30"><img src="layers/rect-cyan.png" width="420" height="auto"></div>
+                </div><!-- scene -->
+           
+        </div><!-- container scene-parallax -->
+    </div><!-- backparallax -->
 
     <header>
         <div id="menuArea">
@@ -70,10 +70,171 @@
     </header>
 
 
+<!-- Back to top button -->
+<a id="buttontop"></a>
+
+    <main>
+        <div class="container">
+            <h2>Brussels, Dance !</h2>
+            <p class="home">A Bruxelles, on danse, on crée, on bouge !</p>
+        </div><!--container-->
+
+        <div class="container butter video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/4GnZthI8T-w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video"></iframe>
+        </div><!--container butter video-->
+
+  <div class="container">
+      <div class="row faq-concours">
+          <div class="col-8">
+            <section class="faq-section">
+                <div class="container">
+                  <div class="row">
+                                    <!-- ***** FAQ Start ***** -->
+                                    <div class="col-md-6 offset-md-3">
+                
+                                        <div class="faq-title text-center pb-3">
+                                            <h2>FAQ</h2>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="faq" id="accordion">
+                                            <div class="card">
+                                                <div class="card-header" id="faqHeading-1">
+                                                    <div class="mb-0">
+                                                        <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-1" data-aria-expanded="true" data-aria-controls="faqCollapse-1">
+                                                            <span class="badge">1</span>C'est quoi Brussels Dance ? 
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                                <div id="faqCollapse-1" class="collapse" aria-labelledby="faqHeading-1" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <p>Brussels, dance ! ce sont 15 lieux culturels qui se rencontrent, échangent et mettent en commun leurs programmations pour assurer une plus grande visibilité à la danse contemporaine et en montrer la richesse et la diversité.</p>
+                                                        <p>Brussels, dance ! c’est plus de 60 spectacles et rencontres, plus de 130 représentations, des artistes émergents et reconnus, des propositions ouvertes et audacieuses. L’occasion de vivre Bruxelles comme capitale créative et remuante.</p>
+                                                    </div>
+                                                </div>
+                                            </div><!--card-->
+                                            <div class="card">
+                                                <div class="card-header" id="faqHeading-2">
+                                                    <div class="mb-0">
+                                                        <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-2" data-aria-expanded="false" data-aria-controls="faqCollapse-2">
+                                                            <span class="badge">2</span>C'est quand brussels Dance ?
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                                <div id="faqCollapse-2" class="collapse" aria-labelledby="faqHeading-2" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <p>Du 1er février au 4 avril, découvrez la danse dans tous ses langages et dans toute sa vitalité!</p>
+                                                    </div>
+                                                </div>
+                                            </div><!--card-->
+                                            <div class="card">
+                                                <div class="card-header" id="faqHeading-3">
+                                                    <div class="mb-0">
+                                                        <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-3" data-aria-expanded="false" data-aria-controls="faqCollapse-3">
+                                                            <span class="badge">3</span>C'est ou Brussels Dance ?
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                                <div id="faqCollapse-3" class="collapse" aria-labelledby="faqHeading-3" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <p>En 2020, Le 140, La Balsamine, La Bellone, le Beursschouwburg, Les Brigittines, BOZAR, Charleroi danse / La Raffinerie, Contredanse, le Kaaitheater, le KVS, Le Jacques Franck, Les Halles de Schaerbeek, Le Senghor, le Théâtre National & le Théâtre Les Tanneurs mettent en commun leur programmation sous le label Brussels, dance !</p>
+                                                    </div>
+                                                </div>
+                                            </div><!--card-->
+                                        </div><!--faq-->
+                    </div><!--row-->
+                </div><!--container-->
+            </section>
+          </div><!--col-->
+
+          <div class="col-4">
+            <div class="container game butter">
+                <div class="row">
+                <div class="col-12">
+                    <h3>Jeu concours !</h3>
+                    <p>Inscrivez-vous et tentez de gagner des places pour Brussels Dance.</p>
+                </div>
+                <div class="col-12">
+                <a href="#" data-toggle="modal" data-target="#exampleModal" id="participer">Participer</a>
+                </div>
+                </div>
+            </div><!--container game butter-->
+          </div><!--col-->
+      </div><!--row-->
+  </div><!--container-->
+        
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Participez au concours !</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div><!--modal header-->
+
+                <div class="modal-body tout-form">
+                    <form class="form-participer" method="post">
+                    <div class="contenu-form">
+                        <input class="insert-demi name-insert" id="insert-name" type="text" name="name" placeholder="votre nom" required>
+                        <input class="insert-demi surname-insert" id="insert-surname" type="text" name="surname" placeholder="votre prénom" required>
+                        <input class="insert-mail" id="insert-mail-1" type="email" name="mail1" placeholder="saisir votre adresse mail" required>
+                        <input class="insert-mail second-input" id="insert-mail-2" type="email" name="mail2" placeholder="confirmer votre adresse mail" required>
+            
+                        <div class="form-check">
+                            <input type="checkbox" name="check-actu" class="form-check-input" id="check-actu" value="coche">
+                            <label class="form-check-label" for="exampleCheck1">Suivre l'actualité</label>
+                        </div><!--form check-->
+                    </div><!--contenu form-->
+                    <input type="submit" value="participer" class="btn btn-success participer-valide" id="valide-form-concour">
+                    </form>
+
+                    <div id="reponse-form"></div>
+        
+                </div><!--modal body-->
+            </div><!--modal content-->
+            </div><!--modal dialogue-->
+        </div><!--modal-->
+    </main>
+
+  
+    <footer class="footer">
+        <div class="container bottom_border">
+            <div class="container text-center py-2">
+                <ul class="foote_bottom_ul_amrc">
+                    <li><a href="index.html">Brussels Dance</a></li>
+                    <li><a href="program.html">Programme</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="lieux.html">Lieux</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="partenaires.html">Partenaires</a></li>
+                    <li><a href="selection.html">Sélection</a></li>
+                </ul><!--foote_bottom-->
+            </div><!--container text-center py-4-->
+        </div><!--container bottom_border-->
+    
+        <div class="container">
+            <ul class="social_footer_ul">
+                <li class="nav-item"><a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="nav-item"><a class="social-icon" href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="nav-item"><a class="social-icon" href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul><!--social_footer_ul ends here--><br><br><br>
+            <p class="center">&copy Scalais Camille 2021</p>
+        </div><!--container-->
+        
+        <div id="bar-cookie">
+            <div class="content">
+                <p>Ce site utilise des cookies - pour plus d'informations, <a href="#">lisez notre politique de cookies</a></p>
+                <a href="#" class="btn btn-primary" id="cookie-ok">J'accepte</a>
+            </div>
+        </div><!--cookie-->
+    </footer>
+</div><!-- container-fluid -->
+
 <!-- Scripts -->
 <script src="js/jquery-3.5.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/scripts.js"></script>
 <script src="https://kit.fontawesome.com/2c0c67d28b.js" crossorigin="anonymous"></script>
 <script src="js/parallax.min.js"></script>
 <script>
@@ -81,7 +242,12 @@
     // Pretty simple huh?
     var scene = document.getElementById('scene');
     var parallax = new Parallax(scene);
+    hoverOnly: true
   
 </script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+
+<script src="js/scripts.js"></script>
 </body>
 </html>

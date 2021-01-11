@@ -1,12 +1,12 @@
 
 
 {
-    "short_name": "Fullpage Camille",
-    "name": "Fullpage JS",
-    "description": "PWA de démontration crée dans le Lab 3TI web 2020-2021",
+    "short_name": "Brussels Dance Camille",
+    "name": "Brussels Dance",
+    "description": "Brussels dance festival site web",
     "icons": [
       {
-        "src": "/images/icon-512.png",
+        "src": "/icon/logo.png",
         "type": "image/png",
         "sizes": "512x512",
         "purpose": "any maskable"
