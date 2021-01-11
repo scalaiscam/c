@@ -39,6 +39,41 @@ img{
 .center{
   text-align: center;
 }
+.bleu-contour{
+  -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: $bleu;
+}
+//--------------------------------------- cookies ---------------------------------------------------
+#bar-cookie{
+  background-color: #EEE;
+ text-align: center;
+ padding:2rem;
+}
+#politique-cookies{
+  color:$black;
+}
+
+//--------------------------------------- concours ---------------------------------------------------
+#participer{
+  color:$black;
+  text-transform: uppercase;
+}
+.game{
+  background-color:$jaune;
+  background-image:url(../img/motif-j.png);
+  background-size: 100%;
+  max-width: 100%!important;
+  padding: 2.5em;
+  text-align: center;
+  margin-top: 13rem;
+
+}
+#nom,#prenom,#mail-1,#mail-2{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
 //--------------------------------------- main ---------------------------------------------------
 main{
   min-height: 200px;
@@ -55,10 +90,9 @@ h2,.h2{
   letter-spacing: 6px;
   font-weight: 800;
   text-align: center;
-  -webkit-text-stroke: 2px;
-  -webkit-text-stroke-color: $bleu;
   text-transform: uppercase;
-  margin-top: 5rem;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
 }
 
 h3,h4{
@@ -73,9 +107,11 @@ header{
   padding: 1rem;
   padding-right: 3rem;
   position: relative;
-  background-color: $black;
+  background-color: #161616;
+  background-image: url(/img/logo-header.png);
+  height: 3rem;
+  display: block;
 }
-
 .img-logo{
   width: 100px;
   height: auto;
@@ -85,52 +121,23 @@ header{
   margin-left: auto;
   margin-right: auto;
 }
-//--------------------------------------- button top ---------------------------------------------------
+#logo-img{
+  width: 20%;
+  z-index: 888;
+  margin-right: auto;
+  margin-top: -125px;
+}
 
-#buttontop {
-  display: inline-block;
-  background-color: $jaune;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  border-radius: 4px;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  transition: background-color .3s, 
-    opacity .5s, visibility .5s;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1000;
-}
-#buttontop::after {
-  content: "\f077";
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2em;
-  line-height: 50px;
-  color: $white;
-}
-#buttontop:hover {
-  cursor: pointer;
-  background-color: #333;
-}
-#buttontop:active {
-  background-color: #555;
-}
-#buttontop.show {
-  opacity: 1;
-  visibility: visible;
-}
+
 
 //--------------------------------------- parallax ---------------------------------------------------
 .backparallax{
-  background-image: url(/layers/logo.png);
+  background-image: url(../layers/logo.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100%;
+  margin-bottom: 10rem;
 }
 .scene-parallax{
   margin: 0 auto;
@@ -145,17 +152,26 @@ header{
   font-size: 30px;
   font-weight: 200;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: -3rem;
+  margin-bottom: 6rem;
 }
 
 //--------------------------------------- faq ---------------------------------------------------
-
-.faq-title h2 {
+.faq-section{
+  width: 100%;
+}
+.faq-concours{
+  align-items: center;
+  margin-top: 15rem;
+}
+.faq-title h3 {
 position: relative;
 margin-bottom: 45px;
 display: inline-block;
 font-weight: 600;
 line-height: 1;
+margin-left: 50px;
+font-size: 3rem;
 }
 
 .faq-title p {
@@ -185,7 +201,7 @@ transition: all 0.3s ease 0s;
 }
 
 .faq .card .card-header:hover {
-  background:#11ffef7c;
+  background:#d6d6d67c;
   padding-left: 10px;
 }
 .faq .card .card-header .faq-title {
@@ -244,27 +260,8 @@ margin-bottom: 14px;
   width: 100%;
   height: 100%;
 }
-.video{
-  margin-top: 5rem;
-  margin-bottom: 7rem;
-  
-}
-//--------------------------------------- concours ---------------------------------------------------
 
-#participer{
-  color:$black;
-  text-transform: uppercase;
-}
-.game{
-  background-color:$jaune;
-  background-image:url(../img/motif-j.png);
-  background-size: 100%;
-  max-width: 100%!important;
-  padding: 3em;
-  text-align: center;
-  margin-top: 10rem;
 
-}
 
 //--------------------------------------- menu ---------------------------------------------------
 
@@ -364,7 +361,7 @@ margin-bottom: 14px;
 .menu ul li .a-menu{
     display: block;
     color:$black;
-    text-shadow: 2px 0 0 #11FFEE, 2px 2px 0 #11FFEE, 0 2px 0 #11FFEE, -2px 2px 0 #11FFEE, -2px 0 0 #11FFEE, -2px -2px 0 #11FFEE, 0 -2px 0 #11FFEE, 2px -2px 0 #11FFEE;
+    text-shadow: 2px 0 0 #4410ff, 2px 2px 0 #4410ff, 0 2px 0 #4410ff, -2px 2px 0 #4410ff, -2px 0 0 #4410ff, -2px -2px 0 #4410ff, 0 -2px 0 #4410ff, 2px -2px 0 #4410ff;
     text-decoration: none;
     transition: color 0.2s;
     text-transform: uppercase;
@@ -387,7 +384,7 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
     bottom: 0;
     left: 0;
     margin-bottom: 50px;
-    background-color: $cyan;
+    background-color: $jaune;
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
@@ -404,7 +401,7 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
   }
 
 .menu ul li .a-menu:hover{
-   color: $cyan;
+   color: $jaune;
    text-shadow: none;
   }
 
@@ -459,10 +456,6 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
     z-index: 12;
 }
 
-//------------------------------------------------ footer -------------------------------------------------------------
-
-
-
 
 
 
@@ -488,7 +481,6 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
 .opacity-color{
   background: $bleu;
   width: auto;
-  
 }
 
 .opacity-color-img{
@@ -612,8 +604,7 @@ th{
 }
 
 .agenda .agenda-date .shortdate {
-  font-size: 0.75em; 
-  
+  font-size: 0.75em;  
 }
 .dayofweek{
   color:$white;
@@ -623,18 +614,15 @@ th{
 .agenda .agenda-time{ 
   width: 140px;
   color: $white; 
-
 } 
 
 //------------even
 .agenda .agenda-events{
     color: rgb(25, 106, 177);
-
 } 
 
 .agenda .agenda-events .agenda-event{
   color:$white;
-
 }
 
 .agenda_event{
@@ -645,9 +633,6 @@ th{
 .agenda-lieu{
   color:$white;
 }
-
-//------------ticket
-
 
 
 
@@ -664,7 +649,7 @@ th{
   text-align: center; 
   z-index: 2; 
   color:$black;
-  margin-left: -283px; 
+  margin-left: -253px; 
   text-transform: uppercase;
 }
 .blanc{
@@ -679,8 +664,8 @@ th{
 
 //------------partie gauche
 .div-titres{
-  margin-bottom: 2em;
   text-transform: uppercase;
+  margin-top: 6rem;
 }
 
 .video{
@@ -698,9 +683,12 @@ th{
   display: inline-block;
   position: relative;
   margin-top: 50px; 
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .image-even-img{
-  height: 750px;
+  height: 820px;
   object-fit: cover;
 }
 
@@ -887,7 +875,55 @@ path.two {
   border-color:transparent $bleu transparent transparent!important;
 }
 
+//--------------------------------------- page contact ---------------------------------------------------
+label{
+  color:$white;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
 
+input[type=submit] {
+  background-color: $bleu;
+  color: $white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: $bleu;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.press{
+  margin-bottom: 5rem;
+  display: block;
+  text-align: left;
+}
+.ressoc{
+  margin-bottom: 7rem;
+}
+.reseaux{
+  font-size: 2.5rem;
+}
 
 //--------------------------------------- footer ---------------------------------------------------
 #main-lieux{
@@ -927,11 +963,12 @@ footer,.footer{
 }
 .social_footer_ul{ 
   display:table; 
-  margin:15px auto 0 auto; 
+  margin:0 auto 0 auto; 
   list-style-type:none;  
 }
 .social_footer_ul li{ 
-  padding-left:20px; 
+  padding-left:10px;
+  padding-right:10px;  
   padding-top:10px; 
   float:left; 
 }
@@ -966,7 +1003,10 @@ footer,.footer{
 .bleu{
   color:$bleu;
 }
-
+.text-blanc{
+  color:$white;
+  
+}
 
 //--------------------------------------- media query ---------------------------------------------------
 @import '_XLarge.scss';

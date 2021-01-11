@@ -19,13 +19,37 @@
 footer{
     margin-top: 5rem;
 }
+//--------------------------------------- contact ---------------------------------------------------
+.column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 
-
-
-
-
-
-
+  .p-3{
+    padding: 0.5rem!important;
+  }
+//--------------------------------------- even ---------------------------------------------------
+  .day{
+    font-size: 1.81818rem;
+  }
+  .hour{
+    font-size: 0.81818rem;
+  }
+  .info-img-prix{
+      margin-top: 1.5rem;
+  }
+  .price, .min {
+    font-size: 1rem;
+}
+.image-even-img {
+    height: 600px;
+}
+.info-img-date{
+    margin-top: -390px;
+}
+.white{
+    padding-top: 1rem;
+}
 
 
 }

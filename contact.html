@@ -24,7 +24,8 @@
 <body>
 <div id="resolution"></div>
    <div class="container-fluid">
-       <header>
+    <header class="fixed-top">
+        <img src="img/logo-header.png" alt="logo" id="logo-img" width="640" height="360" class="fixed-top">
             <div id="menuArea">
                 <input type="checkbox" id="menuToggle" class="input-menu"></input>
                 <label for="menuToggle" class="menuOpen label-menu">
@@ -39,7 +40,7 @@
                             <li><a href="agenda.html" class="a-menu">Agenda</a></li>
                             <li><a href="lieux.html" class="a-menu">Lieux</a></li>
                             <li><a href="contact.html" class="a-menu">Contact</a></li>
-                            <li><a href="partenaires.html" class="a-menu">Partenaires</a></li>
+                            <li><a href="#" class="a-menu">Partenaires</a></li>
                             <li><a href="selection.html" class="a-menu">Sélection</a></li>
                         </ul>
                     </div><!--menuContent-->
@@ -51,11 +52,51 @@
 
         <main>
             <div class="container">
-                <h2 class="h2">Contact</h2>
-                
+                <h2 class="h2 bleu-contour">Contact</h2>
+
+                <div class="row press">
+                    <div class="col-12"><h3>Communication et press</h3></div>
+                    <div class="col">
+                        <p class="text-blanc p-3">Stéphanie Hocq</p>
+                    </div>
+                    <div class="col">
+                        <p class="text-blanc"><i class="fas fa-envelope p-3"></i>stephanie.hocq@brusselsdance.eu</p>
+                    </div>
+                   <div class="col">
+                       <p class="text-blanc"><i class="fas fa-phone-alt p-3"></i>+ 32 (0)2 412 35 25</p>
+                   </div>
+                </div><!--row-->
+
+                <div class="row ressoc">
+                    <div class="col-12"><h3>Suivez-nous sur les réseaux sociaux :</h3></div>
+                    <div class="col">
+                        <p class="text-blanc reseaux">
+                            <i class="fab fa-facebook-square p-3"></i>
+                            <i class="fab fa-youtube p-3"></i>
+                            <i class="fab fa-instagram p-3"></i>
+                        </p>
+                    </div>
+                </div><!--row-->
+
+                <div class="row">
+                    <div class="col-12"><h3>Une question ? N'hésitez pas !</h3></div>
+                    <div class="column">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80598.7058245198!2d4.305350642109841!3d50.85506246058427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3a4ed73c76867%3A0xc18b3a66787302a7!2sBrussels!5e0!3m2!1sen!2sbe!4v1610333899967!5m2!1sen!2sbe" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                    <div class="column">
+                      <form action="/action_page.php">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                        <input type="submit" value="Submit">
+                      </form>
+                    </div>
+                  </div>
+    
             </div><!--container-->
-       
-            
         </main>
 
        

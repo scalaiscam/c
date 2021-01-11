@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Favicons -->
     <link sizes="512x512" href="icon/logo.png" rel="icon">
-    <link rel="manifest" href="manifest.json">
+   
     <!-- safari -->
     <link rel="apple-touch-icon" href="icon/logo.png">
     <!--CSS-->
@@ -26,8 +26,8 @@
 </head>
 <body>
 <div id="resolution"></div>
-   <div class="container-fluid even-fluid">
-       <header>
+   <div class="container-fluid even-fluid" id="butter">
+    <header class="fixed-top">
             <div id="menuArea">
                 <input type="checkbox" id="menuToggle" class="input-menu"></input>
                 <label for="menuToggle" class="menuOpen label-menu">
@@ -42,7 +42,7 @@
                             <li><a href="agenda.html" class="a-menu">Agenda</a></li>
                             <li><a href="lieux.html" class="a-menu">Lieux</a></li>
                             <li><a href="contact.html" class="a-menu">Contact</a></li>
-                            <li><a href="partenaires.html" class="a-menu">Partenaires</a></li>
+                            <li><a href="#" class="a-menu">Partenaires</a></li>
                             <li><a href="selection.html" class="a-menu">Sélection</a></li>
                         </ul>
                     </div><!--menuContent-->
@@ -160,8 +160,10 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 <script src="https://kit.fontawesome.com/2c0c67d28b.js" crossorigin="anonymous"></script>
-
-
 <script src="js/scripts.js"></script>
+<script src="src/butter.js"></script>
+<script>
+    butter.init({cancelOnTouch: true});
+</script>
 </body>
 </html>
